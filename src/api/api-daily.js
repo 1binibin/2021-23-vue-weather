@@ -5,7 +5,7 @@ const url = 'https://api.openweathermap.org/data/2.5/weather'
 // const icons = ['https://openweathermap.org/img/wn/', '@2x.png']
 const params = { units: 'metric', appid }
 
-const apiDaily = (options) => {
+const apiDaily = options => {
   if (options.id) {
     params.id = options.id
   } else if (options.lat && options.lon) {

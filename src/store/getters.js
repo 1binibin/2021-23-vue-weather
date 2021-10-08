@@ -1,5 +1,5 @@
 export default {
-  GET_CROODS: function (state) {
+  GET_COORDS: function (state) {
     return state.coords
   },
   GET_DAILY: function (state) {
