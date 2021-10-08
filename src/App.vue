@@ -10,11 +10,11 @@
 import Header from './components/inc/Header.vue'
 import Footer from './components/inc/Footer.vue'
 
+// import { mapGetters } from 'vuex'
+
 export default {
   name: 'App',
-  components: {
-    Header, Footer
-  }
+  components: { Header, Footer }
 }
 </script>
 
