@@ -9,7 +9,7 @@
 
 <script>
 
-import apiCoords from './api/api-coords'
+import { apiCoords } from './api/api-coords'
 
 export default {
   name: 'Getters01',
@@ -20,7 +20,9 @@ export default {
       lon: 0
     }
   },
-  computed: { // 전역변수를 가공해서 새로운 값을 리턴 -> 실시간으로 보고있음.
+  computed: {
+    // 1. 내가 참조하고 있는 변수값이 바뀌면 내가 바뀐다.
+    // 2. 참조 변수를 가공해서 새로운 값을 리턴
     counter: function () {
       return this.count + '입니다.'
     },
