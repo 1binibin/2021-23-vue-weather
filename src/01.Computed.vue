@@ -21,10 +21,10 @@ export default {
     }
   },
   computed: {
-    // 1. 내가 참조하고 있는 변수값이 바뀌면 내가 바뀐다.
+    // 1. 내가 참조하고 있는 변수값이 바뀌면 내가 바뀐다. -> 내 안에있는 값이 바뀌면 내가 바뀜
     // 2. 참조 변수를 가공해서 새로운 값을 리턴
     counter: function () {
-      return this.count + '입니다.'
+      return this.count + ' 입니다.'
     },
     getLat: function () {
       return `위도는 ${this.lat.toFixed(4)} 입니다`
@@ -39,9 +39,9 @@ export default {
     },
     async getLocation () {
       try {
-        const { coords } = await apiCoords()
-        this.lat = coords.latitude
-        this.lon = coords.longitude
+        const { lat, lon } = await apiCoords()
+        this.lat = lat
+        this.lon = lon
       } catch (err) {
         console.log(err)
       }

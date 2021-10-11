@@ -5,10 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // 변수를 등록
+    // 변수를 등록, Store
   },
   getters: {
-    // Store에 데이터 요청
+    // Store에 데이터 요청, UI
   },
   mutations: {
     // Reducer: Store 데이터 상태 관리 (History)

@@ -13,7 +13,7 @@ export default {
   name: 'Weather04',
   data () {
     return {
-      coords: null,
+      coords: null, // 참조 변수
       daily: null,
       interval: null
     }
@@ -26,8 +26,8 @@ export default {
   methods: {
     getWeather () {
       this.interval = setInterval(async function () {
-        const { coords } = await apiCoords()
-        this.coords = { lat: coords.latitude, lon: coords.longitude }
+        const { lat, lon } = await apiCoords()
+        this.coords = { lat, lon }
       }.bind(this), 3000)
     },
     clearWeather () {

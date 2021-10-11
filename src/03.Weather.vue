@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { apiCoords } from './api/api-coords'
+import { apiCoords } from './api/api-coords.js'
 import apiDaily from './api/api-daily.js'
 
 export default {
@@ -16,10 +16,10 @@ export default {
     }
   },
   async created () {
-    const { coords } = await apiCoords()
-    this.lat = coords.latitude
-    this.lon = coords.longitude
-    const { data } = await apiDaily(this.lat, this.lon)
+    const { lat, lon } = await apiCoords()
+    this.lat = lat
+    this.lon = lon
+    const { data } = await apiDaily({ lat, lon })
     console.log(data)
   }
 }
