@@ -1,7 +1,7 @@
 // mutation 한테 값을 준다.
 
 import { apiCoords } from '../api/api-coords'
-import apiDaily from '../api/api-daily'
+import apiWeather from '../api/api-weather'
 
 const ACT_COORDS = async ({ commit }) => {
   try {
@@ -13,12 +13,13 @@ const ACT_COORDS = async ({ commit }) => {
 }
 
 const ACT_DAILY = async ({ commit }, v) => {
-  const { data } = await apiDaily(v)
+  const { data } = await apiWeather('daily', v)
   commit('MUT_DAILY', data)
 }
 
-const ACT_DAYS = () => {
-
+const ACT_DAYS = async ({ commit }, v) => {
+  const { data } = await apiWeather('days', v)
+  commit('MUT_DAYS', data)
 }
 
 export default { ACT_COORDS, ACT_DAILY, ACT_DAYS }
