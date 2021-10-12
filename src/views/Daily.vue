@@ -11,6 +11,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { getIcon } from '../modules/util'
+import { PLACEHOLDER } from '../modules/common'
 
 import City from '../components/City.vue'
 import Icon from '../components/Icon.vue'
@@ -31,7 +32,7 @@ export default {
     src: function () {
       return (this.GET_DAILY.cod === 200)
         ? getIcon(this.GET_DAILY.weather[0].icon)
-        : 'http://via.placeholder.com/100/FFFFFF?text='
+        : PLACEHOLDER
     },
     temp: function () {
       return (this.GET_DAILY.cod === 200)
