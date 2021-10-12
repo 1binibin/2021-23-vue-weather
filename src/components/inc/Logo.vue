@@ -2,7 +2,7 @@
   <h1 class="logo">
     <router-link to="/">
       <i class="fa fa-sun" />
-      날씨앱
+      Binibin's 날씨앱
       <small>v 0.1</small>
     </router-link>
   </h1>
