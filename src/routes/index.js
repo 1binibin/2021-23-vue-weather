@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
+// 일괄 로딩
 import Daily from '../views/Daily.vue'
-import Days from '../views/Days.vue'
+// import Days from '../views/Days.vue'
+
+// 지연 로딩
+// const Daily = () => import('../views/Daily.vue')
+const Days = () => import('../views/Days.vue')
 
 Vue.use(VueRouter)
 
@@ -19,7 +25,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history', // hash: localhost:8081/#
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
