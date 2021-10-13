@@ -4,7 +4,7 @@ import App from './App.vue'
 // import App from './02.Watch.vue'
 // import App from './03.Weather.vue'
 // import App from './04.Weather.vue'
-import router from './router'
+import router from './routes'
 import store from './store'
 import { BootstrapVue } from 'bootstrap-vue'
 
