@@ -1,7 +1,7 @@
 /**
   * ? vuex의 큰 역할 두가지
   * 1. app의 모든 Component가 접근 가능한 전역변수 -> 사용의 편리성
-  * 2. Immutable data로 만듬 -> history로 쌓는다
+  * 2. Immutable data로 만듬 -> history로 쌓는다.
  */
 
 import Vue from 'vue'
